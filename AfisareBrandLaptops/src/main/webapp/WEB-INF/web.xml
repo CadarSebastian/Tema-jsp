@@ -1,0 +1,14 @@
+<web-app>
+
+<servlet>
+		<servlet-name>brand-servlet</servlet-name>
+		<servlet-class>com.laptop.Brand</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<url-pattern>/laptops</url-pattern>
+		<servlet-name>brand-servlet</servlet-name>
+	</servlet-mapping>
+	
+</web-app>
