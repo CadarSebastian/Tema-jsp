@@ -7,8 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-${ron/5+EURO} EURO
+<form action="" method="post">
+ <input type="number" name="ron"/>
+<input type="submit" value="Convert to EURO"/>
+</form>
+${ron*5} EURO
 
 </body>
 </html>

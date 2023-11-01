@@ -8,16 +8,20 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 public class Brand extends HttpServlet {
-	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
 		String laptopBrand = req.getParameter("brand");
-		//int brandLength = laptopBrand.length();nu mio reusit nicicum asa
+//		//int brandLength = laptopBrand.length();nu mio reusit nicicum asa
 		req.setAttribute("brand", laptopBrand);
-		//req.setAttribute("brandLength", brandLength);
+//		//req.setAttribute("brandLength", brandLength);
 		
 		
 		
 		
+		
+		req.getRequestDispatcher("brandPage.jsp").forward(req, res);
+	}
+	protected void doGet(HttpServletRequest req, HttpServletResponse res)throws ServletException, IOException{
 		req.getRequestDispatcher("brandPage.jsp").forward(req, res);
 	}
 }

@@ -7,8 +7,14 @@
 <title>LaptopBrand</title>
 </head>
 <body>
-Brand name is 
-${brand}<br> Number of caracters is 
+<form action="" method="post">
+ <input type="text" name="brand"/>
+<input type="submit" value="Display"/>
+</form>
+Laptop: ${brand}   
+<br>
+Length:
+<br>
 <%= ((String)request.getAttribute("brand")).length() %>
 
 <% 
@@ -16,6 +22,6 @@ ${brand}<br> Number of caracters is
     String parity = (brandLength % 2 == 0) ? "even" : "odd";
     %><br>
      <%= parity %>.
-    
+
 </body>
 </html>
